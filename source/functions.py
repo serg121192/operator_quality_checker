@@ -159,7 +159,7 @@ def transcribe_file(audio_path: str, model):
 # 3. small - quality 93-96% - time near 7-10 mins - optimal for CPU decryption
 # 4. medium - quality 97-98% - time near 15-20 mins - only for GPU decryption
 # 5. large - quality 98-99% - time near 25-35 mins - only for powerful GPUs (RTX 3070+ series)
-model = whisper.load_model("large-v2", device="cpu")
+model = whisper.load_model("medium", device="cpu")
 
 files = list_drive_files(FOLDER_ID)
 for file in files:
